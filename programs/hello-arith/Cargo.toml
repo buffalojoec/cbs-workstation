@@ -1,0 +1,18 @@
+[package]
+name = "hello-arith"
+version = { workspace = true }
+edition = { workspace = true }
+
+[lib]
+name = "hello_arith"
+crate-type = ["cdylib"]
+
+[dependencies]
+pinocchio = { workspace = true }
+solana-program-log = { workspace = true }
+
+[target.'cfg(target_arch = "bpf")'.dependencies]
+solana-compiler-builtins = { workspace = true }
+
+[lints]
+workspace = true

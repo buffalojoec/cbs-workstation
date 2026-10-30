@@ -1,0 +1,23 @@
+[workspace]
+members = ["programs/*"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+pinocchio = { version = "0.11.2", default-features = false }
+solana-compiler-builtins = "0.3.0"
+solana-define-syscall = "5.2"
+solana-program-log = "1.2.0"
+
+[workspace.lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = [
+    'cfg(target_os, values("solana"))',
+]
+
+[profile.release]
+lto = "fat"
+codegen-units = 1

@@ -1,0 +1,15 @@
+[package]
+name = "hello-world"
+version = { workspace = true }
+edition = { workspace = true }
+
+[lib]
+name = "hello_world"
+crate-type = ["cdylib"]
+
+[dependencies]
+pinocchio = { workspace = true }
+solana-program-log = { workspace = true }
+
+[lints]
+workspace = true

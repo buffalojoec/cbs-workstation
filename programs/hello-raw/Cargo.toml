@@ -1,0 +1,14 @@
+[package]
+name = "hello-raw"
+version = { workspace = true }
+edition = { workspace = true }
+
+[lib]
+name = "hello_raw"
+crate-type = ["cdylib"]
+
+[dependencies]
+solana-define-syscall = { workspace = true }
+
+[lints]
+workspace = true
