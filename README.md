@@ -17,6 +17,8 @@ Build the `cargo-build-sbf` under test:
 ```sh
 scripts/build-cargo-build-sbf.sh         # PR #106
 scripts/build-cargo-build-sbf.sh <PR>    # any other anza-xyz/cargo-build-sbf PR
+scripts/build-cargo-build-sbf.sh <SHA>   # a full commit hash
+scripts/build-cargo-build-sbf.sh --commit <SHA>
 ```
 
 Install Blueshift's sbpf-linker:
