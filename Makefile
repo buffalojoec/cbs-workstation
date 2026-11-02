@@ -5,7 +5,7 @@ ARCH     ?= v3
 
 MAKEFLAGS += --keep-going
 
-build = $(CBS) --manifest-path $(ROOT)/programs/$(2)/Cargo.toml --arch $(ARCH) $(3) \
+build = $(CBS) --lto --manifest-path $(ROOT)/programs/$(2)/Cargo.toml --arch $(ARCH) $(3) \
 	--sbf-out-dir $(ROOT)/out/$(1) -- --target-dir $(ROOT)/target/$(1)
 
 .PHONY: build_sbf build_upstream test clean

@@ -61,12 +61,11 @@ solana-compiler-builtins = "0.3"
 use solana_compiler_builtins as _;
 ```
 
-`[profile.release]` configurations can be used to tune the resulting binary.
-`lto = "fat"` and `codegen-units = 1` combined can shrink the binary size
+The Makefile passes `--lto` to `cargo-build-sbf` by default. Combining it with
+`codegen-units = 1` in `[profile.release]` can shrink the binary size
 significantly.
 
 ```toml
 [profile.release]
-lto = "fat"
 codegen-units = 1
 ```
